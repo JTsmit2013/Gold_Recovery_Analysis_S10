@@ -77,10 +77,13 @@ The dataset is indexed by the date and time of acquisition, ensuring that adjace
 
 ![image](https://github.com/user-attachments/assets/6dcc5b6a-60d2-45c0-9146-25f5b34164c2)
 
+## Final Model Evaluation
 
+After evaluating multiple regression models using the symmetric Mean Absolute Percentage Error (sMAPE), the **Random Forest Regressor** was selected as the best-performing model during cross-validation with a weighted sMAPE of **15.15%**. However, when evaluated on the test set, the **Linear Regression** model ultimately performed best, achieving a **test weighted sMAPE of 16.70%**.
 
+A baseline **Dummy Regressor**, which always predicts the mean, achieved a test sMAPE of **13.40%**, indicating that while model performance varied, none of the models outperformed the baseline on the test set—highlighting potential overfitting or shifts in data distribution.
 
-
-
-
-
+This underscores the importance of:
+- Using cross-validation for model selection.
+- Comparing against simple baselines.
+- Continuing to refine feature engineering and model tuning for improved generalization.
